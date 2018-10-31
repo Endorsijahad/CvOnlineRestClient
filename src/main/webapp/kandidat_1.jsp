@@ -85,11 +85,5 @@
                 <% } %>
             </tbody>
         </table>
-        <form name="insertKandidat" action="./kandidat" method="POST">
-            <input type="text" name="nama" value="" placeholder="Nama Lengkap" />
-            <input type="email" name="email" value="" placeholder="email" />
-            <input type="text" name="tglLahir" value="" placeholder="YYYY-DD-MM" />
-            <input type="submit" value="Submit" />
-        </form>
     </body>
 </html>

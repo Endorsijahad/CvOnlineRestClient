@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import model.Kandidat;
+import model.Kandidat1;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -64,13 +64,12 @@ public class getData {
 
 //            System.out.println("\n\ndari normal \n"+ result.getBody() + "\n\n");
             ObjectMapper objectMapper = new ObjectMapper();
-            List<Kandidat> items = objectMapper.readValue(
-                    result.getBody(),
-                    objectMapper.getTypeFactory().constructParametricType(List.class, Kandidat.class)
+            List<Kandidat1> items = objectMapper.readValue(result.getBody(),
+                    objectMapper.getTypeFactory().constructParametricType(List.class, Kandidat1.class)
             );
-            List<Kandidat> kandidats = new ArrayList<Kandidat>();
+            List<Kandidat1> kandidats = new ArrayList<Kandidat1>();
 //            System.out.println(items.size());
-            for (Kandidat kandidat : items) {
+            for (Kandidat1 kandidat : items) {
                 System.out.println("id : " + kandidat.getId());
                 System.out.println("nama : " + kandidat.getNama());
                 System.out.println("email : " + kandidat.getEmail());
